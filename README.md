@@ -3,6 +3,9 @@ Vagrant file for using Foundation for Apps
 
 Vagrant file for developing [Foundation for Apps](http://foundation.zurb.com/apps.html) sites without polluting your host box.
 
+**NOTE:** Running within a shared directory (e.g. `/vagrant`) does not work on Windows 7 using VirtualBox 5.0.10 and Vagrant 1.7.4.
+Apparently the culprit is the really long directory paths created by npm in the node_modules directory.
+
 Initializing the VM
 -------------------
 
