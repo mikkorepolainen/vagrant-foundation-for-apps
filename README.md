@@ -46,25 +46,8 @@ npm start
 ```
 
 The server runs in the address `http://localhost:8079/` by default.
-To access the server from the host, modify the host name configuration in <app name>\gulpfile.js.
-Change:
-```
-// Starts a test server, which you can view at http://localhost:8079
-gulp.task('server', ['build'], function() {
-  gulp.src('./build')
-    .pipe($.webserver({
-      port: 8079,
-      host: 'localhost',
-      fallback: 'index.html',
-      livereload: true,
-      open: true
-    }))
-  ;
-});
-```
-
-To:
-```
+To access the server from the host, modify the host name configuration from `localhost` to `0.0.0.0` in `<app name>\gulpfile.js`.
+```javascript
 // Starts a test server, which you can view at http://localhost:8079
 gulp.task('server', ['build'], function() {
   gulp.src('./build')
